@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Viktors Cinema</title>
+</head>
+<body>
+    <section class="content-header" th:replace="headers/imports::imports"></section>
+    <section class="content-header" th:replace="headers/navbar::navbar"></section>
+    <main>
+        <div class="container-lg">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header">Index</div>
+                        <div class="card-body">
+                            <table th:if="${error}">
+                                <tr>
+                                    <td>Error code:</td>
+                                    <td th:text="${error.code}" style="padding-left: 3em"></td>
+                                </tr>
+                                <tr>
+                                    <td>Error message:</td>
+                                    <td th:text="${error.message}" style="padding-left: 3em"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
